@@ -2333,7 +2333,7 @@ class Llama:
                 # download the additional file
                 hf_hub_download(
                     repo_id=repo_id,
-                    filename=matching_additional_file,
+                    filename=matching_additional_file.removeprefix(subfolder + "\\"),
                     subfolder=subfolder,
                     local_dir=local_dir,
                     local_dir_use_symlinks=local_dir_use_symlinks,
